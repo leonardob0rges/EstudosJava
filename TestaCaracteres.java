@@ -4,10 +4,10 @@ public class TestaCaracteres {
         System.out.println(letra);
 
         char valor = 66;
-        System.out.println(valor);
+        System.out.println(valor); // B
 
         valor = (char) (valor + 1); // valor += 1
-        System.out.println(valor);
+        System.out.println(valor); // C
 
         String palavra = "Isso é uma var string";
         System.out.println(palavra);
@@ -15,7 +15,13 @@ public class TestaCaracteres {
         palavra += 2020; // converte int em String e concatena ao final de palavra
         System.out.println(palavra);
 
+        char letra1 = 'a';
 
+        char valor1 = 65;
+        System.out.println(valor1); // A
+
+        valor1 = (char) (valor1 + 1);
+        System.out.println(valor1); // B
     }
 }
 
@@ -29,9 +35,12 @@ guarda um único caractere
 char caractere = 'a';
 obrigatório aspas simples
 
+o tipo char guarda apenas um caractere da tabela unicode, por isso, quando passamos um valor numérico,
+teremos como saída o caractere correspondente ao número na tabela unicode.
+
 ---- Tipo texto: String
-é um tipo de dado não primitivo
-e sim, tipo referência
+é um tipo de dado não primitivo,
+tipo referência
 
 String texto = "teste";
 obrigatório aspas duplas
