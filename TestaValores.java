@@ -2,8 +2,9 @@ public class TestaValores {
     public static void main(String[] args) {
         int primeiro = 5;
         int segundo = 7;
-        segundo = primeiro;
+        segundo = primeiro; // atribui o valor de "primeiro" para "segundo"
         primeiro = 10;
+        // Variáveis guardam valores e não referências
 
         // Quanto vale o segundo?
         System.out.println(segundo); // 5
