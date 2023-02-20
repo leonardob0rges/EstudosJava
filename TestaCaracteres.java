@@ -15,6 +15,7 @@ public class TestaCaracteres {
         palavra += 2020; // converte int em String e concatena ao final de palavra
         System.out.println(palavra);
 
+
     }
 }
 
