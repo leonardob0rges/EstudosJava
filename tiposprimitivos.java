@@ -38,7 +38,6 @@ class tiposprimitivos{
 
 		System.out.println("Valor float: " + tipoFloat);
 		System.out.println("Valor inteiro: " + tipoInteiro);
-		
 
 		double valorDouble = 14.78;
 		float valorFloat = 15.3f;
