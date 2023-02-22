@@ -1,6 +1,7 @@
 public class TestaCondicional {
     public static void main(String[] args) {
         System.out.println("testando condicionais");
+        // Testa Idade
         int idade = 16;
         int quantidadePessoas = 3;
 
@@ -14,6 +15,18 @@ public class TestaCondicional {
             } else {
                 System.out.println("infelizmente você não pode entrar");
             }
+        }
+
+        // Testa IR
+        double salario = 3300.0;
+
+        if(salario < 2600.0){
+            System.out.println("A sua alíquota é de 15%");
+            System.out.println("Você pode deduzir até R$ 350");
+        }
+        if(salario < 3750.0){
+            System.out.println("A sua alíquota é de 22,5%");
+            System.out.println("Você pode deduzir até R$ 636");
         }
 
     }
