@@ -2,7 +2,7 @@ public class TestaCondicional2 {
     public static void main(String[] args) {
         System.out.println("testando condicionais");
         // Testa Idade
-        int idade = 16;
+        int idade = 18;
         int quantidadePessoas = 3;
 
         /* Complexidade ciclomática
@@ -24,18 +24,39 @@ public class TestaCondicional2 {
             System.out.println("infelizmente você não pode entrar");
         }
 
-        // Testa IR
-        double salario = 3300.0;
+        boolean acompanhado = true;
 
-        if(salario < 2600.0){
-            System.out.println("A sua alíquota é de 15%");
-            System.out.println("Você pode deduzir até R$ 350");
+        if(idade >= 18 && acompanhado){
+            System.out.println("seja bem vindo");
+        } else{
+            System.out.println("infelizmente você não pode entrar");
         }
 
-        if(salario < 3750.0){
-            System.out.println("A sua alíquota é de 22,5%");
-            System.out.println("Você pode deduzir até R$ 636");
+        boolean acompanhado1 = quantidadePessoas >= 2;
+
+        if(idade >= 18 && acompanhado1){
+            System.out.println("seja bem vindo");
+        } else{
+            System.out.println("infelizmente você não pode entrar");
         }
+
+        /*
+        int quantidadePessoas1 = 1;
+        boolean acompanhado1 = false;
+
+        if(quantidadePessoas1 >= 2){
+            acompanhado1 = true;
+        } else if(quantidadePessoas1 == 1){
+            acompanhado1 = false;
+        }
+
+        if(idade >= 18 && acompanhado1){
+            System.out.println("seja bem vindo");
+        } else{
+            System.out.println("infelizmente você não pode entrar");
+        }
+        */
+
 
     }
 }
