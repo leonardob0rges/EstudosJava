@@ -24,7 +24,10 @@ public class TestaCondicional2 {
             System.out.println("infelizmente você não pode entrar");
         }
 
+        // boolean condicionais
         boolean acompanhado = true;
+
+        System.out.println("valor de acompanhado = " + acompanhado);
 
         if(idade >= 18 && acompanhado){
             System.out.println("seja bem vindo");
