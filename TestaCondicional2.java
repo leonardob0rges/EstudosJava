@@ -35,7 +35,9 @@ public class TestaCondicional2 {
             System.out.println("infelizmente você não pode entrar");
         }
 
-        boolean acompanhado1 = quantidadePessoas >= 2;
+        int idade1 = 18;
+        int quantidadePessoas1 = 3;
+        boolean acompanhado1 = quantidadePessoas1 >= 2;
 
         if(idade >= 18 && acompanhado1){
             System.out.println("seja bem vindo");
@@ -61,6 +63,8 @@ public class TestaCondicional2 {
         */
 
 
+
+
     }
 }
 
@@ -72,5 +76,30 @@ para passar no if por ex.
 Operador AND - &&:
 todas as condições precisam ser true,
 para passar no if por ex.
+
+*/
+
+/*
+boolean expression:
+
+int idade1 = 68;
+boolean ehIdoso = idade1 >= 65;
+System.out.println(ehIdoso); // true
+
+*/
+
+/*
+operador lógico:
+Abaixo há afirmações referentes às operações lógicas na linguagem Java.
+
+- Os operadores lógicos devem ter no lado esquerdo e direito uma expressão booleana.
+Correto, por exemplo:
+
+if (idade > 18 && idade < 65) {
+}
+// Repare que temos duas expressões booleanas, na esquerda e na direita do operador lógico &&.
+
+- O operador lógico AND é representado pelos caracteres && e o OR pelo ||.
+Correto.
 
 */
