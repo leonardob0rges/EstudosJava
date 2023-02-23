@@ -24,6 +24,7 @@ public class TestaCondicional {
             System.out.println("A sua alíquota é de 15%");
             System.out.println("Você pode deduzir até R$ 350");
         }
+
         if(salario < 3750.0){
             System.out.println("A sua alíquota é de 22,5%");
             System.out.println("Você pode deduzir até R$ 636");
