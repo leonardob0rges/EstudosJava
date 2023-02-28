@@ -43,7 +43,6 @@ public class TestaEscopo {
 
         System.out.println(salario);
 
-
     }
 }
 
