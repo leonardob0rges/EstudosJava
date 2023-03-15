@@ -1,6 +1,5 @@
 public class TestaWhile {
     public static void main(String[] args) {
-        // baixar plugin intellisense
 
         int contador = 0;
         while(contador <= 10){
