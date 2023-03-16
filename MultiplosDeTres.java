@@ -3,8 +3,36 @@ public class MultiplosDeTres {
         System.out.println("Múltiplos de 3:\n");
 
         for(int multiplos = 0; multiplos < 101; multiplos += 3){
-            System.out.println(multiplos);
+            System.out.print(multiplos);
+            System.out.print(" ");
         }
+
+        System.out.println();
+        System.out.println("Ou:");
+
+        for(int multiplos3 = 0; multiplos3 <= 100; multiplos3++){
+            if(multiplos3 % 3 == 0){
+                System.out.print(multiplos3);
+                System.out.print(" ");
+            }
+            else {
+                continue;
+            }
+        }
+
+        System.out.println();
+        System.out.println("Ou:");
+
+        for(int multiplos3 = 0; multiplos3 <= 100; multiplos3++){
+            if(multiplos3 % 3 != 0){
+                continue;
+            }
+            else {
+                System.out.print(multiplos3);
+                System.out.print(" ");
+            }
+        }
+
 
     }
 }
