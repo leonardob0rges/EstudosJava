@@ -1,0 +1,145 @@
+Java Orientação a Objetos:
+
+Módulo 1 - O problema do paradigma procedural
+Aula 1 - Paradigma Procedural X Objetos:
+o paradigma procedural era mais usado de forma individual de pessoa/pessoa
+por isso tem alguns problemas. também focava no copy e paste de código
+que deveria ser repetido.
+
+Na OO:
+dados e comportamentos(funcionalidades) estão todas "entrelaçadas"
+ex: sempre que tiver cpf, irá validar.
+
+-> Ideia central do paradigma OO.
+Com base no que você ouviu no vídeo, selecione a alternativa que expressa a ideia central do paradigma
+da Orientação a Objetos:
+
+- Dado e funcionalidade sobre ele andam juntos.
+Correto. No exemplo do vídeo, se o CPF e sua função de validação andassem juntos, teríamos aplicado OO.
+
+- Todo código deve estar dentro de uma classe.
+Apesar dessa sentença ser uma consequência das linguagens orientadas a objetos, não é sua ideia central,
+uma vez que é possível encontrarmos classes com códigos totalmente procedurais
+(podemos ter várias classes que representam formulários com campo CPF e código de validação duplicado).
+
+- Getters e setters devem ser usados em suas classes.
+Como você vai aprender mais a frente, getters e setters são usados para esconder o mecanismo de funcionamento
+de determinado comportamento. Contudo, o uso deles não garante que o código será orientado a objetos.
+
+
+
+-> Cheiro procedural
+De acordo com as situações citadas no vídeo, escolha a única alternativa que não é sinal
+de programação procedural:
+
+- Várias equipes trabalhando em um único projeto.
+Correto. Para que várias equipes consigam trabalhar em um mesmo projeto, é necessário que as responsabilidades
+de cada código estejam bem definidas e claras, evitando conflitos na hora de realizar mudanças e evoluções.
+Código com responsabilidades coesas é sinal do paradigma OO.
+
+- Formulário com inúmeros campos distribuídos em várias abas, tudo sendo gerenciado por um único programador.
+Em geral o código desse formulário concentra várias responsabilidades, como por exemplo layout, validação,
+gravação no banco de dados, segurança, etc. Algumas responsabilidades podem ser necessárias a vários outros
+formulários, forçando o projeto a duplicar código, sinal do paradigma procedural.
+
+- Copy & Paste e Ctrl + F como prática regular do desenvolvedor para propagar mudanças no projeto.
+O Copy & Paste duplica código, e por isso o Ctrl + F acaba sendo usado para substituir trechos de códigos iguais.
+Isso denota que o comportamento de alguma informação está espalhado pelo projeto, sinal do paradigma procedural.
+
+
+
+-> Seja bem-vindo, Fulano!
+Fulano é novo na equipe da empresa KWZ. Ficou responsável por uma tela de cadastro, onde existe um campo
+que deve ser validado conforme a regra de negócio XYZ. Ele pergunta a seu gerente onde pode obter informações
+sobre a tal regra. Marque as alternativas que podem ser identificadas como respostas de quem usa o
+paradigma procedural em seus projetos:
+
+- Dependendo do módulo, Fulano deve perguntar ao responsável técnico do mesmo.
+Correto. Essa resposta denota que a regra está implementada em vários lugares. Quem é o responsável por ela?
+Como diz o ditado popular "Cachorro que tem muitos donos acaba morrendo de fome". Tipicamente procedural.
+
+- "Copie o código de validação que está no formulário ABCD."
+Correto. Resposta típica de quem usa o paradigma procedural para não arriscar inserir erros em códigos que já estão
+funcionando ou em produção.
+
+- Fulano deve entrar em contato com alguém da equipe de analistas de negócio da empresa, para ele entender a
+regra e implementá-la.
+Correto. Essa resposta indica que Fulano deve implementar novamente a regra, gerando mais um local caso a regra
+precise ser alterada. Tipicamente procedural.
+
+- Basta que Fulano consuma uma classe que representa a informação a ser cadastrada pelo campo.
+Errado. Caso exista alguma alteração na regra, apenas essa classe será modificada, propagando a mudança para
+quem a consome. Tipicamente OO.
+
+
+
+-> Resumo
+Nessa aula conhecemos o paradigma procedural, que era utilizado como prática de programação antes da introdução
+das linguagens orientadas a objetos.
+
+Foi usada como exemplo a necessidade de validar o CPF em um formulário para discutirmos os principais problemas
+que podem aparecer neste paradigma.
+
+Em especial, à medida que outros formulários e desenvolvedores precisam da mesma validação de CPF, não era
+fácil de perceber que já havia procedimentos e funções que faziam esse trabalho, pois dados e funções não
+possuíam um vínculo tão forte. Isso poderia resultar em mais uma nova função ou trecho de código com
+responsabilidade parecida.
+
+Além disso, conhecemos a ideia central do paradigma da orientação a objetos, que é criar unidades de código
+que combinem os dados associados a determinada informação com as funcionalidades aplicadas aqueles
+dados (por exemplo, CPF + validação). São os atributos e métodos.
+
+
+
+Módulo 2 - Orientação a Objetos:
+Aula 1 - Primeira classe - Contas:
+
+Faremos o ByteBank, um projeto de banco da Alura. Para isso, precisaremos criar o sistema que o compõe. Iremos descobrir quais dados serão necessários para esse sistema.
+
+A menor unidade que iremos trabalhar é a conta bancária
+Se olharmos a definição de conta corrente no WikiPedia, descobriremos uma série de referências acerca de juros e taxas, mas a questão que iremos nos atentar é que as contas bancárias acionam informações diferentes para fins variados.
+
+Façamos uma analogia com uma seguradora de veículos: é importante que ela tenha informações como marca, modelo, chassi e a cor do carro. Mas é irrelevante para a seguradora saber quantos cilindros o carro tem ou a versão do motor. Já para uma empresa que fabrica veículos, esses dados fazem parte do domínio do problema.
+
+Criamos um novo projeto, com nome bytebank,
+as 4 unidades (dados do banco) serão:
+o que tem na conta
+
+saldo, agência, número (da conta), titular
+
+e definimos os métodos (atributos) da conta:
+são ações que ela faz
+
+saca, deposita, transfere
+
+
+os dados da conta, são na verdade, uma especificação de um tipo conta:
+
+tipo Conta:
+    saldo
+    agencia
+    numero
+    titular
+
+para isso definimos um tipo (uma classe) da conta:
+
+class Conta{
+    double saldo;
+    int agencia;
+    int numero;
+    String titular;
+}
+
+
+Aula 2 - Instanciação, atributos e referências:
+
+class Conta{
+    double saldo;
+    int agencia;
+    int numero;
+    String titular;
+}
+
+a classe Conta possui 4 características, que são chamadas de atributos,
+ou seja, toda conta tem saldo, agencia, numero e titular, também podem
+aparecer nomeados como propriedades ou campos.
